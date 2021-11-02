@@ -11,7 +11,7 @@ while True
     service = Service("C:\webdrivers\chromedriver.exe")
     driver = webdriver.Chrome(service=service)
 
-    # enter link(s) below
+    # enter link to check
     driver.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3060-ti-8gb-gddr6-pci-express-4-0-graphics-card-steel-and-black/6439402.p?skuId=6439402")
 
     print(driver.title)
@@ -21,7 +21,7 @@ while True
     if (str.find("Sold Out") != -1):
         print("3060ti is still not available at Best Buy")
     else:
-        # create a twilio account and use the assigned "from" number
+        # create a Twilio account and get a number through them (free)
         print("3060ti IS NOW AVAILABLE Best Buy")
         client.messages.create(to="+yourCellNumber", from_="+yourTwilioNumber", body="3060ti is now available!!! Go to: www.bestbuy.com/site/nvidia-geforce-rtx-3060-ti-8gb-gddr6-pci-express-4-0-graphics-card-steel-and-black/6439402.p?skuId=6439402")
 
