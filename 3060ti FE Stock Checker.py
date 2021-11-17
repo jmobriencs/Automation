@@ -5,7 +5,7 @@ from twilio.rest import Client
 
 import time
 
-while True
+while True:
     # create a Twilio account to get account sid/auth token
     client = Client("ENTER ACCOUNT SID", "ENTER AUTH TOKEN")
     service = Service("C:\webdrivers\chromedriver.exe")
